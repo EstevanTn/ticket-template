@@ -1,0 +1,39 @@
+extends ../structure/_layout
+block content
+    .ticket__body
+        strong DNI/RUC
+        span 10701296767
+        strong Señor(es)
+        span Alexander Estevan Tume Naquiche
+        strong Dirección
+        span Amp. Nueva Generación Mz B Lt 3
+        table
+            thead
+                tr
+                    th(colspan="3" rowspan="1") Descripción del producto
+                tr
+                    th(colspan="1" rowspan="1" class="numeric" style="width: 8%") Item
+                    th(colspan="1" rowspan="1" class="numeric") Cantidad
+                    th(colspan="1" rowspan="1" class="numeric") Precio
+            tbody
+                tr
+                    td(colspan="1" rowspan="2" class="numeric") 1
+                    td(colspan="3" rowspan="1") Gasolina 85
+                tr
+                    td(colspan="1" rowspan="1" class="numeric") 1 GLI
+                    td(colspan="1" rowspan="1" class="numeric") 12.71
+            tfoot
+                tr
+                    td(colspan="2" rowspan="1") Op. Gravadas
+                    td(colspan="1" rowspan="1") 12.71
+                tr
+                    td(colspan="2" rowspan="1") Igv
+                    td(colspan="1" rowspan="1") 2.29
+                tr
+                    td(colspan="2" rowspan="1") Total Venta
+                    td(colspan="1" rowspan="1") 15.00
+        .ticket__qr
+            img(src="images/qr.png", alt="Representación impresa")
+            small Representación impresa
+                    
+

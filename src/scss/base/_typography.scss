@@ -1,0 +1,10 @@
+body {
+    color: $text-color;
+    font-family: $text-font-stack;
+    font-size: $font-size-texto;
+    background: #cccccc;
+
+    @include flexCenter;
+    height: 100%;
+    width: 100%;
+}

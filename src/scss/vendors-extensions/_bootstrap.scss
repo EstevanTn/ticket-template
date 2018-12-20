@@ -1,0 +1,51 @@
+.btn-secondary{
+	background: $brand-color-2;
+	border-color: $brand-color-2;
+	border-radius: 0;
+	&:hover{
+		background: darken($brand-color-2, 8%);
+		border-color: darken($brand-color-2, 8%);
+	}
+}
+
+.btn-secondary:not([disabled]):not(.disabled).active, .btn-secondary:not([disabled]):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+    color: $color-light;
+    background-color: darken($brand-color-2,8%);
+    border-color: darken($brand-color-2, 8%);
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.68);
+}
+
+.btn-primary{
+	background: $brand-color;
+	border-color: $brand-color;
+	&:hover{
+		background: darken($brand-color, 8%);
+		border-color: darken($brand-color, 8%);
+	}
+}
+
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: $color-light;
+    background-color: darken($brand-color, 8%);
+    border-color: darken($brand-color, 8%);
+    box-shadow: 0 0 0 0.2rem #f02d006b;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: $light-grey;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+.form-control::-moz-placeholder {
+    color: $color-placeholder;
+    opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+    color: $color-placeholder;
+}
+.form-control::-webkit-input-placeholder {
+    color: $color-placeholder;
+}

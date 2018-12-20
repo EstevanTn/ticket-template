@@ -1,0 +1,136 @@
+.ticket {
+    font-family: $text-font-stack;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    background: #fefefe;
+    line-height: 1.2em;
+    min-width:  300px;
+    border-radius: 5px;
+    width: 400px;
+    
+    &__header {
+        padding: 5px;
+        justify-content: center;
+        &-logo {
+            @include flexCenter;
+            img {
+                max-height: 80px;
+                max-width: 300px;
+            }
+        }
+        &-description {
+            text-align: center;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            font-size: $font-size-texto - 2;
+            strong {
+                padding: .2em 0em;
+            }
+            .ticket-number {
+                margin: .5em 0em 0em 0em;
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        table {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__footer {
+        padding: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        .numeric {
+            text-align: right;
+        }
+        tr {
+            td, th {
+                padding: 5px;
+            }
+        }
+        thead { 
+            th {
+                text-transform: uppercase;
+                background: rgba($light-grey, .2);
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid $light-grey;
+                }
+            }
+        }
+        tfoot {
+            text-align: right;
+            td {
+                &:nth-child(1){
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__qr {
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+        img {
+            min-width: 120px;
+            max-width: 120px;
+        }
+    }
+}
+
+.credits {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 90%;
+    left: 10%;
+    background: #222222;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5em;
+    a {
+        font-weight: bold;
+        color: #fefefe;
+        text-decoration: none;
+        &:hover, &:focus {
+            color: #cccccc;
+        }
+    }
+}
+
+
+@media print {
+    body {
+        display: block;
+    }
+    .ticket {
+        width: 100%;
+        padding: 0px;
+    }
+    .credits {
+        display: none;
+    }
+}

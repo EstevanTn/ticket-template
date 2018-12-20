@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Ticket Template
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="shortcut icon", href="images/avatar.png", type="image/x-icon")
+    body
+        .ticket
+            include _header
+            block content
+            include _footer
+        .credits
+            span Created by <a href="http://tunaqui.pe">EstevanTn</a>
+            a(href="https://github.com/EstevanTn/ticket-template.git") Download Source
+        //script(src="js/bundle.js")

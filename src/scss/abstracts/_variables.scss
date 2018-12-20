@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Roboto', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+// tamaño de fuente global
+$font-size-texto: .75em;
+$font-size-nav: 15px;
+
+$font-size-1: 40px;
+$font-size-2: 32px;
+$font-size-3: 28px;
+$font-size-4: 24px;
+$font-size-5: 20px;
+$font-size-6: 19px;
+$font-size-7: 14px;
+
+
+/// Copy text color
+/// @type Color
+$text-color: #646464;
+
+/// Main brand color
+/// @type Color
+$brand-color: #F02D00 !default;
+$brand-color-2: #07697F !default;
+
+/// Light
+/// @type Color
+$color-light: #FFFFFF;
+
+/// Light grey
+/// @type Color
+$light-grey: #BBBBBB !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #4A4A4A !default;
+
+/// green
+/// @type color
+$color-green: #7FC530 !default;
+
+$color-placeholder: #888888;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+//breakpoint
+$xs: 575px;
+$sm: 768px;
+$md: 992px;
+$lg: 1199px;
+$xl: 1200px;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
