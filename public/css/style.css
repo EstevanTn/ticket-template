@@ -23,7 +23,6 @@ body{
   color:#646464;
   font-family:Roboto,sans-serif;
   font-size:.75em;
-  background:#ccc;
   display:-ms-flexbox;
   display:flex;
   -ms-flex-align:center;
@@ -86,21 +85,24 @@ body{
   margin:0;
 }
 
+.upper{
+  text-transform:uppercase;
+}
+
+.lower{
+  text-transform:lowercase;
+}
+
 .ticket{
   font-family:Roboto,sans-serif;
-  padding:10px;
   box-sizing:border-box;
   -ms-flex-direction:column;
       flex-direction:column;
   background:#fefefe;
-  line-height:1.2em;
+  line-height:1.4em;
   min-width:300px;
-  border-radius:5px;
-  width:400px;
-}
-
-.ticket__header{
-  padding:5px;
+  width:390px;
+  text-transform:uppercase;
 }
 
 .ticket__header,.ticket__header-logo{
@@ -134,10 +136,17 @@ body{
   padding:.2em 0;
 }
 
-.ticket__header-description .ticket-number{
-  margin:.5em 0 0;
-  font-weight:bolder;
-  text-transform:uppercase;
+.ticket__header-description .left{
+  text-align:left !important;
+}
+
+.ticket__header .title{
+  font-weight:700;
+  font-size:1.4em;
+}
+
+.ticket__header .description{
+  font-size:1em;
 }
 
 .ticket__body{
@@ -168,23 +177,21 @@ body{
 
 .ticket table .numeric{
   text-align:right;
+  padding-right:1em;
 }
 
 .ticket table tr td,.ticket table tr th{
-  padding:5px;
+  padding:.2em;
+}
+
+.ticket table thead tr{
+  border-top:1px solid #bbb;
+  border-bottom:1px solid #bbb;
 }
 
 .ticket table thead th{
   text-transform:uppercase;
   background:hsla(0,0%,73%,.2);
-}
-
-.ticket table tbody tr td{
-  border-bottom:1px solid #bbb;
-}
-
-.ticket table tfoot{
-  text-align:right;
 }
 
 .ticket table tfoot td:first-child{
@@ -199,11 +206,20 @@ body{
   -ms-flex-direction:column;
       flex-direction:column;
   text-transform:capitalize;
+  -ms-flex-pack:center;
+      justify-content:center;
 }
 
 .ticket__qr img{
-  min-width:120px;
-  max-width:120px;
+  min-width:130px;
+  max-width:130px;
+}
+
+.divider{
+  font-size:.2em;
+  content:"";
+  white-space:nowrap;
+  color:transparent;
 }
 
 .credits{

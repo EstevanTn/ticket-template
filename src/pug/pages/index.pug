@@ -1,39 +1,80 @@
 extends ../structure/_layout
 block content
     .ticket__body
-        strong DNI/RUC
-        span 10701296767
-        strong Señor(es)
-        span Alexander Estevan Tume Naquiche
-        strong Dirección
-        span Amp. Nueva Generación Mz B Lt 3
+        table
+            tr
+                td
+                    strong Fecha
+                td : 04-06-2019
+                td
+                    strong Hora
+                td : 23:00
+            tr
+                td
+                    strong DNI/RUC
+                td(colspan="3") : 10701296767
+            tr
+                td 
+                    strong R. SOCIAL
+                td(colspan="3") : Alexander Estevan Tume Naquiche
+            tr
+                td
+                    strong Dirección
+                td(colspan="3") : Amp. Nueva Generación Mz B Lte 3
         table
             thead
                 tr
-                    th(colspan="3" rowspan="1") Descripción del producto
-                tr
-                    th(colspan="1" rowspan="1" class="numeric" style="width: 8%") Item
-                    th(colspan="1" rowspan="1" class="numeric") Cantidad
-                    th(colspan="1" rowspan="1" class="numeric") Precio
+                    th Producto
+                    th(class="numeric") Cant.
+                    th(class="numeric") U.Med.
+                    th(class="numeric") Precio
+                    th(class="numeric") Importe
             tbody
                 tr
-                    td(colspan="1" rowspan="2" class="numeric") 1
-                    td(colspan="3" rowspan="1") Gasolina 85
+                    td(colspan="5") GASOHOL 90
                 tr
-                    td(colspan="1" rowspan="1" class="numeric") 1 GLI
-                    td(colspan="1" rowspan="1" class="numeric") 12.71
+                    td(colspan="2" class="numeric") 1.00
+                    td(class="numeric") GLI
+                    td(class="numeric") 10.00
+                    td(class="numeric") 10.00
+                tr
+                    td(class="divider" colspan="5") divider
             tfoot
                 tr
                     td(colspan="2" rowspan="1") Op. Gravadas
-                    td(colspan="1" rowspan="1") 12.71
+                    td(colspan="1" rowspan="1") S/
+                    td(colspan="2" rowspan="1" class="numeric") 12.71
                 tr
-                    td(colspan="2" rowspan="1") Igv
-                    td(colspan="1" rowspan="1") 2.29
+                    td(colspan="2" rowspan="1") I.G.V. (18%)
+                    td(colspan="1" rowspan="1") S/
+                    td(colspan="2" rowspan="1" class="numeric") 2.29
                 tr
-                    td(colspan="2" rowspan="1") Total Venta
-                    td(colspan="1" rowspan="1") 15.00
+                    td(colspan="2" rowspan="1") Importe Venta
+                    td(colspan="1" rowspan="1") S/
+                    td(colspan="2" rowspan="1" class="numeric") 15.00
+                tr
+                    td(colspan="5" class="divider") divider
+                tr
+                    td(colspan="1")
+                        strong SON
+                    td(colspan="4") : QUINCE 00/100 SOLES
+                tr
+                    td
+                        strong  USUARIO
+                    td(colspan="2") : TUNAQUI
+                    td
+                        strong TURN0
+                    td : 01
+                tr
+                    td
+                        strong  PLACA
+                    td(colspan="2") : ---
+                    td
+                        strong LADO
+                    td : A
         .ticket__qr
-            img(src="images/qr.png", alt="Representación impresa")
-            small Representación impresa
+            div
+                img(src="images/qr.png", alt="Representación impresa")
+            small.upper Representación impresa de la factura electrónica.
                     
 
