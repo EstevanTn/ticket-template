@@ -6,3 +6,40 @@ body {
     height: 100%;
     width: 100%;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+        td,
+        th {
+            padding: .2em;
+        }
+    }
+    thead {
+        tr {
+            border-top: 1px solid $light-grey;
+            border-bottom: 1px solid $light-grey;
+        }
+        th {
+            text-transform: uppercase;
+            background: rgba($light-grey, .2);
+        }
+    }
+    tfoot {
+        td {
+            &:nth-child(1) {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.description {
+    font-size: 1em;
+}

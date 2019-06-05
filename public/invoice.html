@@ -4,12 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Ticket Template</title>
+    <title>Invoice Template</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" href="images/icono.png" type="image/x-icon"/>
   </head>
   <body>
-    <div class="ticket">
+    <div class="invoice">
       <div class="header">
         <div class="header__logo"><img src="images/logo.png"/></div>
         <div class="header__description">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="body">
-        <table>
+        <table class="info">
           <tr>
             <td><strong>Fecha</strong></td>
             <td>: 04-06-2019</td>
@@ -36,7 +36,7 @@
             <td colspan="3">: 10701296767</td>
           </tr>
           <tr>
-            <td> <strong>R. SOCIAL</strong></td>
+            <td> <strong>RAZÓN SOCIAL</strong></td>
             <td colspan="3">: Alexander Estevan Tume Naquiche</td>
           </tr>
           <tr>
@@ -44,7 +44,7 @@
             <td colspan="3">: Amp. Nueva Generación Mz B Lte 3</td>
           </tr>
         </table>
-        <table>
+        <table class="details">
           <thead>
             <tr>
               <th>Producto</th>
@@ -56,13 +56,18 @@
           </thead>
           <tbody>
             <tr>
-              <td colspan="5">GASOHOL 90</td>
-            </tr>
-            <tr>
-              <td class="numeric" colspan="2">1.00</td>
+              <td>SERVICIO DE TRANSPORTE DE GASOHOL 90 CALLAO - CAÑETE</td>
+              <td class="numeric">2.000</td>
               <td class="numeric">GLI</td>
               <td class="numeric">10.00</td>
+              <td class="numeric">20.00</td>
+            </tr>
+            <tr>
+              <td>GASOHOL 90</td>
+              <td class="numeric">2.000</td>
+              <td class="numeric">GLI</td>
               <td class="numeric">10.00</td>
+              <td class="numeric">20.00</td>
             </tr>
             <tr>
               <td class="divider" colspan="5">divider</td>
@@ -84,11 +89,12 @@
               <td colspan="1" rowspan="1">S/</td>
               <td class="numeric" colspan="2" rowspan="1">15.00</td>
             </tr>
+          </tfoot>
+        </table>
+        <table class="info">
+          <tbody>
             <tr>
-              <td class="divider" colspan="5">divider</td>
-            </tr>
-            <tr>
-              <td colspan="1"><strong>SON</strong></td>
+              <td colspan="1" style="width: 100px;"><strong>SON</strong></td>
               <td colspan="4">: QUINCE 00/100 SOLES</td>
             </tr>
             <tr>
@@ -103,12 +109,12 @@
               <td><strong>LADO</strong></td>
               <td>: A</td>
             </tr>
-          </tfoot>
+          </tbody>
         </table>
-        <div class="qr">
-          <div><img src="images/qr.png" alt="Representación impresa"/></div>
-          <div><small>Representación impresa de la factura electrónica.</small><small>Autorizado mediante resolución N°1055/SUNAT.</small><small>Consulte la válidez de este comprobante en <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm</a></small></div>
-        </div>
+      </div>
+      <div class="qr">
+        <div><img src="images/qr.png" alt="Representación impresa"/></div>
+        <div><small>Representación impresa de la factura electrónica.</small><small>Autorizado mediante resolución N°1055/SUNAT.</small><small>Consulte la válidez de este comprobante en <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm</a></small></div>
       </div>
       <div class="footer"><strong>~ DIMEXSA ~</strong>
         <address>Gracias por tu preferencia</address>

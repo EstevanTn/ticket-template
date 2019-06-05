@@ -30,7 +30,40 @@ body{
   -ms-flex-pack:center;
       justify-content:center;
   height:100%;
+}
+
+body,table{
   width:100%;
+}
+
+table{
+  border-collapse:collapse;
+}
+
+table tr td,table tr th{
+  padding:.2em;
+}
+
+table thead tr{
+  border-top:1px solid #bbb;
+  border-bottom:1px solid #bbb;
+}
+
+table thead th{
+  text-transform:uppercase;
+  background:hsla(0,0%,73%,.2);
+}
+
+.title,table tfoot td:first-child{
+  font-weight:700;
+}
+
+.title{
+  font-size:1.4em;
+}
+
+.description{
+  font-size:1em;
 }
 .clearfix:after{
   clear:both;
@@ -93,6 +126,11 @@ body{
   text-transform:lowercase;
 }
 
+.numeric{
+  text-align:right;
+  padding-right:1em;
+}
+
 .ticket{
   font-family:Roboto,sans-serif;
   box-sizing:border-box;
@@ -105,24 +143,28 @@ body{
   text-transform:uppercase;
 }
 
-.ticket__header,.ticket__header-logo{
+.ticket .header{
+  text-align:center;
+}
+
+.ticket .header,.ticket .header__logo{
   -ms-flex-pack:center;
       justify-content:center;
 }
 
-.ticket__header-logo{
+.ticket .header__logo{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-align:center;
       align-items:center;
 }
 
-.ticket__header-logo img{
+.ticket .header__logo img{
   max-height:80px;
   max-width:300px;
 }
 
-.ticket__header-description{
+.ticket .header__description{
   text-align:center;
   padding:5px;
   display:-ms-flexbox;
@@ -132,37 +174,35 @@ body{
   font-size:-1.25em;
 }
 
-.ticket__header-description strong{
+.ticket .header__description strong{
   padding:.2em 0;
 }
 
-.ticket__header-description .left{
+.ticket .header__description .left{
   text-align:left !important;
 }
 
-.ticket__header .title{
-  font-weight:700;
-  font-size:1.4em;
+.ticket .header__number{
+  margin-top:.5em;
 }
 
-.ticket__header .description{
-  font-size:1em;
-}
-
-.ticket__body{
+.body{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-direction:column;
       flex-direction:column;
 }
 
-.ticket__body table{
+.body table{
   margin-top:10px;
   margin-bottom:10px;
 }
 
-.ticket__footer{
+.footer{
   padding:5px;
+}
+
+.footer,.qr{
   text-align:center;
   display:-ms-flexbox;
   display:flex;
@@ -170,47 +210,14 @@ body{
       flex-direction:column;
 }
 
-.ticket table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-.ticket table .numeric{
-  text-align:right;
-  padding-right:1em;
-}
-
-.ticket table tr td,.ticket table tr th{
-  padding:.2em;
-}
-
-.ticket table thead tr{
-  border-top:1px solid #bbb;
-  border-bottom:1px solid #bbb;
-}
-
-.ticket table thead th{
-  text-transform:uppercase;
-  background:hsla(0,0%,73%,.2);
-}
-
-.ticket table tfoot td:first-child{
-  font-weight:700;
-}
-
-.ticket__qr{
-  text-align:center;
+.qr{
   margin:auto;
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-direction:column;
-      flex-direction:column;
-  text-transform:capitalize;
+  text-transform:uppercase;
   -ms-flex-pack:center;
       justify-content:center;
 }
 
-.ticket__qr img{
+.qr img{
   min-width:130px;
   max-width:130px;
 }
@@ -258,6 +265,93 @@ body{
   .credits{
     display:none;
   }
+}
+
+.invoice{
+  text-transform:uppercase;
+  width:960px !important;
+  padding:.2em;
+  line-height:1.4em;
+  font-size:1.1em;
+}
+
+.invoice .header{
+  width:100%;
+  max-height:120px;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:row;
+      flex-direction:row;
+}
+
+.invoice .header,.invoice .header__logo{
+  -ms-flex-align:center;
+      align-items:center;
+  -ms-flex-pack:center;
+      justify-content:center;
+}
+
+.invoice .header__logo{
+  width:200px;
+}
+
+.invoice .header__logo img{
+  width:100%;
+}
+
+.invoice .header__description{
+  width:calc(100% - 400px);
+  margin:0 .4em;
+  padding:.5em;
+}
+
+.invoice .header__number{
+  width:200px;
+  padding:.6em;
+  border:1px solid #bbb;
+  border-radius:1.3em;
+  font-size:1.3em;
+  text-align:center;
+  line-height:1.8em;
+}
+
+.invoice .header__number .title:nth-child(2){
+  color:#fc4136;
+}
+
+.invoice .body{
+  margin-top:.5em;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+      flex-direction:column;
+}
+
+.invoice .body table{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+.invoice .info tr td:first-child,.invoice .info tr td:nth-child(3),.invoice .info tr td:nth-child(5),.invoice .info tr td:nth-child(7),.invoice .info tr td:nth-child(9){
+  width:150px;
+}
+
+.invoice .details tr td{
+  width:75%;
+}
+
+.invoice .qr{
+  -ms-flex-direction:row !important;
+      flex-direction:row !important;
+  text-align:left !important;
+}
+
+.invoice .qr div{
+  padding:0 .6em 0 0;
+}
+
+.invoice .qr div small{
+  display:block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
-extends ../structure/_ticket
+extends ../structure/_invoice
 block content
     .body
-        table
+        table(class="info")
             tr
                 td
                     strong Fecha
@@ -15,13 +15,13 @@ block content
                 td(colspan="3") : 10701296767
             tr
                 td 
-                    strong R. SOCIAL
+                    strong RAZÓN SOCIAL
                 td(colspan="3") : Alexander Estevan Tume Naquiche
             tr
                 td
                     strong Dirección
                 td(colspan="3") : Amp. Nueva Generación Mz B Lte 3
-        table
+        table(class="details")
             thead
                 tr
                     th Producto
@@ -31,12 +31,18 @@ block content
                     th(class="numeric") Importe
             tbody
                 tr
-                    td(colspan="5") GASOHOL 90
-                tr
-                    td(colspan="2" class="numeric") 1.00
+                    td SERVICIO DE TRANSPORTE DE GASOHOL 90 CALLAO - CAÑETE
+                    td(class="numeric") 2.000
                     td(class="numeric") GLI
                     td(class="numeric") 10.00
+                    td(class="numeric") 20.00
+                tr
+                    td GASOHOL 90
+                    td(class="numeric") 2.000
+                    td(class="numeric") GLI
                     td(class="numeric") 10.00
+                    td(class="numeric") 20.00
+                
                 tr
                     td(class="divider" colspan="5") divider
             tfoot
@@ -52,10 +58,10 @@ block content
                     td(colspan="2" rowspan="1") Importe Venta
                     td(colspan="1" rowspan="1") S/
                     td(colspan="2" rowspan="1" class="numeric") 15.00
+        table(class="info")
+            tbody
                 tr
-                    td(colspan="5" class="divider") divider
-                tr
-                    td(colspan="1")
+                    td(colspan="1" style="width: 100px;")
                         strong SON
                     td(colspan="4") : QUINCE 00/100 SOLES
                 tr
@@ -72,10 +78,10 @@ block content
                     td
                         strong LADO
                     td : A
-        .qr
-            div
-                img(src="images/qr.png", alt="Representación impresa")
-            div
-                small Representación impresa de la factura electrónica.
-                small Autorizado mediante resolución N°1055/SUNAT.
-                small Consulte la válidez de este comprobante en <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm</a>
+    .qr
+        div
+            img(src="images/qr.png", alt="Representación impresa")
+        div
+            small Representación impresa de la factura electrónica.
+            small Autorizado mediante resolución N°1055/SUNAT.
+            small Consulte la válidez de este comprobante en <a href="https://e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm">e-consulta.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm</a>

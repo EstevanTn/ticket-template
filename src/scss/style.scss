@@ -16,10 +16,9 @@
 // 4. Layout-related sections
 @import 'layout/header',
 'layout/footer';
-
 // 5. Components
-
 // 6. Page-specific styles
-@import 'pages/home';
+@import 'pages/ticket';
+@import 'pages/invoice';
 // 7. Themes
 @import 'themes/default';
