@@ -138,8 +138,8 @@ table thead th{
       flex-direction:column;
   background:#fefefe;
   line-height:1.4em;
-  min-width:300px;
-  width:390px;
+  min-width:270px;
+  width:370px;
   text-transform:uppercase;
 }
 
@@ -254,104 +254,141 @@ table thead th{
   color:#ccc;
 }
 
-@media print{
-  body{
-    display:block;
-  }
-  .ticket{
-    width:100%;
-    padding:0;
-  }
-  .credits{
-    display:none;
-  }
-}
-
-.invoice{
+.pdf{
   text-transform:uppercase;
   width:960px !important;
-  padding:.2em;
   line-height:1.4em;
   font-size:1.1em;
 }
 
-.invoice .header{
-  width:100%;
-  max-height:120px;
-  display:-ms-flexbox;
-  display:flex;
-  -ms-flex-direction:row;
-      flex-direction:row;
-}
-
-.invoice .header,.invoice .header__logo{
-  -ms-flex-align:center;
-      align-items:center;
-  -ms-flex-pack:center;
-      justify-content:center;
-}
-
-.invoice .header__logo{
-  width:200px;
-}
-
-.invoice .header__logo img{
-  width:100%;
-}
-
-.invoice .header__description{
-  width:calc(100% - 400px);
-  margin:0 .4em;
+.pdf>div{
   padding:.5em;
 }
 
-.invoice .header__number{
-  width:200px;
-  padding:.6em;
-  border:1px solid #bbb;
-  border-radius:1.3em;
-  font-size:1.3em;
-  text-align:center;
-  line-height:1.8em;
+.pdf table{
+  line-height:1.2em;
 }
 
-.invoice .header__number .title:nth-child(2){
-  color:#fc4136;
-}
-
-.invoice .body{
-  margin-top:.5em;
+.pdf .header{
   display:-ms-flexbox;
   display:flex;
   -ms-flex-direction:column;
       flex-direction:column;
 }
 
-.invoice .body table{
+.pdf .header,.pdf .header__logo{
+  width:100%;
+  -ms-flex-align:center;
+      align-items:center;
+  -ms-flex-pack:center;
+      justify-content:center;
+}
+
+.pdf .header__logo img{
+  width:100%;
+}
+
+.pdf .header__description{
+  width:100%;
+  line-height:1.2em;
+}
+
+.pdf .header__number{
+  width:100%;
+  padding:10px 0;
+  font-size:1.2em;
+  text-align:center;
+  line-height:1.3em;
+}
+
+.pdf .header__number .title:nth-child(2){
+  color:#fc4136;
+}
+
+@media screen and (min-width:750px){
+  .pdf .header{
+    max-height:150px;
+    -ms-flex-direction:row;
+        flex-direction:row;
+  }
+  .pdf .header__logo{
+    width:200px;
+  }
+  .pdf .header__description{
+    width:calc(100% - 400px);
+    margin:0 .4em;
+    padding:.5em;
+  }
+  .pdf .header__number{
+    width:200px;
+    border:1px solid #bbb;
+  }
+}
+
+.pdf .body{
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+      flex-direction:column;
+}
+
+.pdf .body table{
   margin-top:5px;
   margin-bottom:5px;
 }
 
-.invoice .info tr td:first-child,.invoice .info tr td:nth-child(3),.invoice .info tr td:nth-child(5),.invoice .info tr td:nth-child(7),.invoice .info tr td:nth-child(9){
+.pdf .info tr td:first-child,.pdf .info tr td:nth-child(3),.pdf .info tr td:nth-child(5),.pdf .info tr td:nth-child(7),.pdf .info tr td:nth-child(9){
   width:150px;
 }
 
-.invoice .details tr td{
+.pdf .details tr td{
   width:75%;
 }
 
-.invoice .qr{
+.pdf .qr{
   -ms-flex-direction:row !important;
       flex-direction:row !important;
   text-align:left !important;
 }
 
-.invoice .qr div{
+.pdf .qr div{
   padding:0 .6em 0 0;
 }
 
-.invoice .qr div small{
+.pdf .qr div small{
   display:block;
+}
+
+@media print{
+  .pdf>div{
+    padding:0;
+    width:100%;
+  }
+  .pdf .header{
+    display:block;
+  }
+  .pdf .header>div{
+    display:inline-block;
+  }
+  .pdf .header__logo{
+    width:200px;
+    height:100%;
+    margin:auto;
+  }
+  .pdf .header__logo img{
+    text-align:center;
+    margin:auto;
+  }
+  .pdf .header__description{
+    width:calc(100% - 400px);
+  }
+  .pdf .header__number{
+    width:180px;
+    border:1px solid #bbb;
+  }
+  .credits{
+    display:none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,20 @@
-.invoice {
+.pdf {
     text-transform: uppercase;
     width: 960px !important;
-    padding: .2em;
     line-height: 1.4em;
     font-size: 1.1em;
+    >div {
+        padding: .5em;
+    }
+    table {
+        line-height: 1.2em;
+    }
     .header {
         width: 100%;
-        max-height: 120px;
         @include flexCenter;
-        flex-direction: row;
+        flex-direction: column;
         &__logo {
-            width: 200px;
+            width: 100%;
             justify-content: center;
             align-items: center;
             img {
@@ -18,27 +22,39 @@
             }
         }
         &__description {
-            width: calc( 100% - 400px);
-            margin: 0 .4em 0 .4em;
-            padding: .5em;
+            width: 100%;
+            line-height: 1.2em;
         }
         &__number {
-            width: 200px;
-            padding: .6em;
-            border: 1px solid $light-grey;
-            border-radius: 1.3em;
-            font-size: 1.3em;
+            width: 100%;
+            padding: 10px 0 10px 0;
+            font-size: 1.2em;
             text-align: center;
-            line-height: 1.8em;
+            line-height: 1.3em;
             .title {
                 &:nth-child(2) {
                     color: #FC4136;
                 }
             }
         }
+        @include desde(750px) {
+            max-height: 150px;
+            flex-direction: row;
+            &__logo {
+                width: 200px;
+            }
+            &__description {
+                width: calc( 100% - 400px);
+                margin: 0 .4em 0 .4em;
+                padding: .5em;
+            }
+            &__number {
+                width: 200px;
+                border: 1px solid $light-grey;
+            }
+        }
     }
     .body {
-        margin-top: .5em;
         display: flex;
         flex-direction: column;
         table {
