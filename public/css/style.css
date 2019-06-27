@@ -62,8 +62,18 @@ table thead th{
   font-size:1.4em;
 }
 
-.description{
-  font-size:1em;
+.description,.email,.ruc{
+  font-size:.8em;
+  line-height:1.1em;
+}
+
+.description small,.description span,.description strong,.email small,.email span,.email strong,.ruc small,.ruc span,.ruc strong{
+  display:block;
+}
+
+.email,.ruc{
+  font-size:.9em !important;
+  margin:2px 0;
 }
 .clearfix:after{
   clear:both;
@@ -220,6 +230,10 @@ table thead th{
 .qr img{
   min-width:130px;
   max-width:130px;
+}
+
+.qr small{
+  display:block;
 }
 
 .divider{

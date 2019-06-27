@@ -41,5 +41,18 @@ table {
 }
 
 .description {
-    font-size: 1em;
+    font-size: .8em;
+    line-height: 1.1em;
+    strong,
+    span,
+    small {
+        display: block;
+    }
+}
+
+.email,
+.ruc {
+    @extend .description;
+    font-size: .9em !important;
+    margin: 2px 0;
 }
